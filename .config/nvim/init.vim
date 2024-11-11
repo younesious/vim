@@ -306,6 +306,13 @@ noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 "" Opens a tab edit command with the path of the currently edited file filled
 noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 
+"" ctrl + space to suggest autocomplete
+inoremap <silent><expr> <C-Space> coc#refresh()
+
+"" Complete the auto completion for coc with enter
+inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<CR>"
+
+
 "" fzf.vim
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.pyc,__pycache__
@@ -517,7 +524,6 @@ let python_highlight_all = 1
 
 let g:loaded_perl_provider = 0
 let g:loaded_ruby_provider = 0
-inoremap <silent><expr> <C-Space> coc#refresh()
 
 "*****************************************************************************
 "" Convenience variables
@@ -558,4 +564,3 @@ else
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
 endif
-
