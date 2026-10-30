@@ -305,7 +305,7 @@ noremap <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 inoremap <silent><expr> <C-Space> coc#refresh()
 
 "" Complete the auto completion for coc with enter
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<C-r>=coc#on_enter()\<CR>"
 
 
 "" fzf.vim
