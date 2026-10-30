@@ -278,6 +278,8 @@ set autoread
 "" Mappings
 "*****************************************************************************
 
+" rename
+nmap <leader>rn <Plug>(coc-rename)
 
 " session management
 nnoremap <leader>so :OpenSession<Space>
