@@ -1,0 +1,8 @@
+{
+  "[go]": {
+    "coc.preferences.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    }
+  }
+}
